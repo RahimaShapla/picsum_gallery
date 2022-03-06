@@ -13,6 +13,4 @@ A few resources to get the images from internet:
 - [API: https://picsum.photos/v2/list?page=1&limit=100](https://picsum.photos/v2/list?page=1&limit=100k)
 
 App Screenshot
-![alt text](https://ibb.co/4T919wz)
-![alt text](https://ibb.co/q9QD7K8)
-![alt text](https://ibb.co/Y3CJfLG)
+
