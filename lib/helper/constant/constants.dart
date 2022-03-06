@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 
 //current app releasing mode
-const MODE_DEVELOPMENT = true;
+const modeDevelopment = true;
 
 const Color kWhiteColor = Color(0xFFffffff);
 const Color kWhiteColor1 = Color(0xFFF4F6FF);
@@ -27,15 +27,15 @@ class DefaultValue {
 }
 
 class TextSize {
-  static const double Text_Size_10 = 10;
-  static const double Text_Size_12 = 12;
-  static const double Text_Size_14 = 14;
-  static const double Text_Size_16 = 16;
-  static const double Text_Size_18 = 18;
-  static const double Text_Size_20 = 20;
-  static const double Text_Size_24 = 24;
-  static const double Text_Size_30 = 30;
-  static const double Text_Size_36 = 36;
+  static const double textSize10 = 10;
+  static const double textSize12 = 12;
+  static const double textSize14 = 14;
+  static const double textSize16 = 16;
+  static const double textSize18 = 18;
+  static const double textSize20 = 20;
+  static const double textSize24 = 24;
+  static const double textSize30 = 30;
+  static const double textSize36 = 36;
 }
 
 class DimenHeight {
@@ -44,6 +44,7 @@ class DimenHeight {
   static const double height_20 = 20;
   static const double height_25 = 25;
   static const double height_30 = 30;
+  static const double height_32 = 32;
   static const double height_35 = 35;
   static const double height_40 = 40;
   static const double height_45 = 45;

@@ -1,47 +1,51 @@
+import 'package:picsum_gallery/helper/constant/app_json.dart';
 
+class ImageResponse {
+  List<ImageModel>? _imageList;
 
-class BannerResponse {
-  bool? success;
-  String? message;
-  String? siteURL;
-  int? periodIn;
-  List<BannerModel>? bannerList;
+  ImageResponse();
 
-  BannerResponse();
+  ImageResponse.fromJson(List<dynamic>? json) {
 
-  BannerResponse.fromJson(Map<String, dynamic>? json) {
-  /*  success = json![status];
-    message = json[j_message];
-    siteURL = json[siteUrl];
-    periodIn = json[period_in];
-    if (json[data_] != null) {
-      bannerList = [];
-      json[data_].forEach((v) {
-        bannerList!.add(BannerModel.fromJson(v));
-      });
-    }*/
+    if (json != null) {
+      _imageList = [];
+      _imageList =  json.map((job) => ImageModel.fromJson(job)).toList();
+    }
   }
 
- /* Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data[status] = this.success;
-    data[j_message] = this.message;
-    return data;
-  }*/
+  List<ImageModel>? get imageList => _imageList;
 }
 
-class BannerModel {
-  int? id;
-  String? enTitle;
-  String? bnTitle;
-  String? imageUrl;
+class ImageModel {
+  String? _id;
+  String? _author;
+  int? _width;
+  int? _height;
+  String? _imageURL;
+  String? _downloadURL;
 
-  BannerModel();
+  ImageModel();
 
-  BannerModel.fromJson(Map<String, dynamic>? json) {
-/*    id = json![id_];
-    enTitle = json[en_title];
-    enTitle = json[bn_title];
-    imageUrl = json[image_url];*/
+  ImageModel.fromJson(Map<String, dynamic>? json) {
+    _id = json![id_];
+    _author = json[author_];
+    _width = json[width_];
+    _height = json[height_];
+    _imageURL = json[imageUrl_];
+    _downloadURL = json[downloadUrl_];
   }
+
+  String? get downloadURL => _downloadURL;
+
+  String? get imageURL => _imageURL;
+
+  int? get height => _height;
+
+  int? get width => _width;
+
+  String? get author => _author;
+
+  String? get id => _id;
+
+
 }

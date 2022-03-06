@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:picsum_gallery/helper/constant/constants.dart';
+import 'package:picsum_gallery/helper/router/route_constants.dart';
 
 class SplashActivity extends StatefulWidget {
   const SplashActivity({Key? key}) : super(key: key);
@@ -12,28 +12,21 @@ class SplashActivity extends StatefulWidget {
 }
 
 class _SplashActivityState extends State<SplashActivity> {
-@override
+  @override
   void initState() {
-  Timer(
-    const Duration(seconds: 1),
-    getNextWidget,
-  );
+    Timer(
+      const Duration(seconds: 3),
+      getNextWidget,
+    );
     super.initState();
   }
+
   void getNextWidget() async {
-/*    Navigator.pushReplacement(
-      context,
-      MaterialPageRoute(
-        builder: (context) =>  WelcomeActivity()),
-    );*/
+    Navigator.popAndPushNamed(context, homeRoute);
   }
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-      statusBarColor: Colors.transparent,
-      statusBarBrightness: Brightness.dark,
-    ));
     return Scaffold(
       backgroundColor: kTransparent,
       body: SafeArea(
@@ -53,7 +46,7 @@ class _SplashActivityState extends State<SplashActivity> {
                   tileMode: TileMode.clamp),
               shape: BoxShape.rectangle,
             ),
-            child:  Container(
+            child: Container(
               margin: const EdgeInsets.all(DimenHeight.height_100),
               alignment: Alignment.center,
               decoration: const BoxDecoration(
@@ -68,17 +61,14 @@ class _SplashActivityState extends State<SplashActivity> {
                 ],
               ),
               child: const Image(
-                image: AssetImage(
-                    'assets/images/ic_logo.png'),
+                image: AssetImage('assets/images/ic_logo.png'),
                 height: DimenHeight.height_100,
                 width: DimenHeight.height_100,
               ),
-
             ),
           ),
         ),
       ),
     );
   }
-
 }

@@ -2,27 +2,25 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
+import 'package:dio_http_cache/dio_http_cache.dart';
 import 'package:picsum_gallery/helper/constant/constants.dart';
-
-
-import 'logging_interceptor.dart';
 
 class ApiBaseHelper {
   
-  static const String _baseUrl = MODE_DEVELOPMENT == true
-      ? 'https://wateraid-bd.digitaluservice.org/api/v1/'
-      : 'https://wateraid-bd.digitaluservice.org/api/v1/';
+  static const String _baseUrl = modeDevelopment == true
+      ? 'https://picsum.photos/v2/'
+      : 'https://picsum.photos/v2/';
 
   static const String _contentType = 'Content-Type';
 
 
   static const String _xAuthorization = 'X-Authorization';
 
-  static const String _xAuthorizationKeyAndroidApp = MODE_DEVELOPMENT == true
+  static const String _xAuthorizationKeyAndroidApp = modeDevelopment == true
       ? ''
       : '';
 
-  static const String _xAuthorizationKeyIosApp = MODE_DEVELOPMENT == true
+  static const String _xAuthorizationKeyIosApp = modeDevelopment == true
       ? ''
       : '';
 
@@ -47,7 +45,8 @@ class ApiBaseHelper {
     );
 
     _dio = Dio(dioOptions)
-      ..interceptors.add(LoggingInterceptors());
+      ..interceptors.add(DioCacheManager(CacheConfig(baseUrl: "http://www.google.com")).interceptor);
+    //  ..interceptors.add(LoggingInterceptors());
   }
 
   Dio getDio() => _dio!;

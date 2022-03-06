@@ -1,10 +1,15 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:picsum_gallery/helper/constant/constants.dart';
 import 'package:picsum_gallery/helper/framework/pgallery_application.dart';
 import 'helper/framework/app_component.dart';
 
-Future<void> main() async{
+Future<void> main() async {
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+    systemNavigationBarColor: kPrimaryDarkColor, // navigation bar color
+    statusBarColor: kPrimaryDarkColor, // status bar color
+  ));
   WidgetsFlutterBinding.ensureInitialized();
   Development();
 }
@@ -25,7 +30,7 @@ void _setupPrimarySystem() async {
 void _init() async {
   var pGallery = PGallery();
   await pGallery.onCreate();
-  runApp(AppComponent(pGallery));
+  runApp(AppComponent(pGallery: pGallery));
 }
 
 /*void _setupDebugPrint() async {
@@ -42,5 +47,3 @@ void _debugPrintSynchronouslyWithText(String message, String version,
   message = "[${DateTime.now()} - $version]: $message";
   debugPrintSynchronously(message, wrapWidth: wrapWidth);
 }
-
-
