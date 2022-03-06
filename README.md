@@ -16,4 +16,4 @@ App Screenshot
 
 ![Screenshot_2022-03-06-22-27-03-399_com example picsum_gallery](https://user-images.githubusercontent.com/11914290/156932616-bc474309-d991-4e6b-aea4-9a824d737025.jpg)
 ![Screenshot_2022-03-06-22-27-13-352_com example picsum_gallery](https://user-images.githubusercontent.com/11914290/156932622-0ba90c11-f279-46bb-837a-8b638a413381.jpg)
-![Screenshot_2022-03-06-22-27-27-006_com example picsum_gallery](https://user-images.githubusercontent.com/11914290/156932617-c5f28107-ecf7-4006-bb84-6e354ac31129.jpg)
+![Screenshot_2022-03-06-22-40-05-886_com example picsum_gallery](https://user-images.githubusercontent.com/11914290/156932722-938d50ae-a52d-4515-b825-0897de3a5693.jpg)
